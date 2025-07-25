@@ -5,7 +5,7 @@ from .models import Blog, Category, Tag, Comment
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug', 'category', 'is_slider', 'is_featured']
-    prepopulated_fields = {'slug': ('title')}
+    prepopulated_fields = {'slug': ('title',)}
     list_editable = ['is_slider', 'is_featured']
     search_fields = ['title', 'category']
 
